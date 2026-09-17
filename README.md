@@ -30,6 +30,8 @@ The simulator is capable of performing DC, AC and Transient analysis, their synt
 In the next section we will simulate some example netlists.
 
 ## Simulation examples
+Example 1:
+
 ```
   Full bridge rectifier circuit with filter capacitor
   V1 1 3 SIN(0 100 1k 1m 0 90)
@@ -48,3 +50,7 @@ The output is exported to a text file and by plotting the result using a simple 
 
 <img width="1920" height="974" alt="Figure_1" src="https://github.com/user-attachments/assets/b7209697-a76f-437e-bb94-97e2e4add681" />
 
+Example 2:
+```
+
+```
