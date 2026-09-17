@@ -41,6 +41,7 @@ In the next section we will simulate some example netlists.
   C1 0 2 10u
   .tran 10u 10m
 ```
+<p align="center">
 <img width="551" height="316" alt="image" src="https://github.com/user-attachments/assets/448ae850-042d-4524-bef4-105456b91067" />
-
+</p>
 
