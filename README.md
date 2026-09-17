@@ -126,10 +126,6 @@ The Trapezoidal method is a numerical integration method that approximates the a
 ### Sparse matrices
 Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to perform operations on it.
 
-Here's a drop‑in section you can paste into the README. I've grouped limitations by theme so readers can skim, and I've kept the tone consistent with the rest of your documentation.
-
----
-
 ## Known limitations
 
 This simulator was written as a learning project, and its scope and capabilities are deliberately smaller than a standard SPICE simulator. The following limitations are worth knowing before you use it.
