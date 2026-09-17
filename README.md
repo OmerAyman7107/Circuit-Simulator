@@ -126,5 +126,33 @@ The Trapezoidal method is a numerical integration method that approximates the a
 ### Sparse matrices
 Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to perform operations on it.
 
-## Limitations
+Here's a drop‑in section you can paste into the README. I've grouped limitations by theme so readers can skim, and I've kept the tone consistent with the rest of your documentation.
+
+---
+
+## Known limitations
+
+This simulator was written as a learning project, and its scope and capabilities are deliberately smaller than a standard SPICE simulator. The following limitations are worth knowing before you use it.
+
+### Analyses
+- Only one analysis command per netlist. If you include more than one (`.OP`, `.AC`, `.TRAN`), only the last one is used.
+- AC analysis is small‑signal only, and only sources marked with the `AC` keyword contribute. There is no noise analysis, distortion analysis, or parameter sweep.
+
+### Netlist syntax
+- Only `*` at the start of a line is treated as a comment. Inline comments are not supported.
+- Line continuation is not supported.
+- Node names must be integers. Node `0` is ground.
+- Scale factors are single‑character only and case‑sensitive. Multi‑character suffixes such as `1Meg` or scientific notation such as `1e3` are not accepted; write `1M` and `1k` instead.
+- There is no support for `.MODEL` cards, `.SUBCKT`, `.PARAM`, `.INCLUDE`, or any other dot‑command other than `.OP`, `.AC`, and `.TRAN`.
+- Transient sources support only the `SIN`/`SINE` waveform. `PULSE`, `EXP`, and `PWL` are not implemented.
+
+### Device models
+- Device parameters are hardcoded and cannot be changed from the netlist. `Dname n+ n- model` and `Qname C B E model` parse a model name, but it is ignored.
+- The diode model is the ideal Shockley equation. It has no series resistance, no junction capacitance, no breakdown voltage, and no temperature dependence.
+- The BJT model is a basic Ebers‑Moll model with fixed forward and reverse alphas. It has no Early effect, no junction capacitance, and no temperature dependence.
+- There is no support for MOSFETs, switches, transmission lines, coupled inductors, or any other element not listed in the syntax section.
+
+### Output
+- The simulator writes results to a single text file chosen by the user, one variable at a time. There is no batch export or multi‑variable output.
+- There is no built‑in plotting. Waveforms are exported as plain text and must be plotted separately (for example, with Python and Matplotlib, as shown in the examples).
 
