@@ -111,3 +111,15 @@ The circuit data structure is a class containing all the information and helper 
 
 ### Solver
 The solver class is used to solve the matrix by determining the mode of analysis and then solving the circuit by calling the circuit's data structure helper method that builds the modified nodal analysis matrix then solves it using Sparse LU factorization.
+
+## Numerical methods
+This section discusses the numerical methods that were used in the program.
+
+### Newton-Raphson method
+The Newton-Raphson method is an iterative method used to solve non-linear equations by linearizing around an initial guess then solving iterativly until the solution converges, it is used to linearize non-linear circuit elements and finding a linearized companion model to be replaced with the element then solve the system until the solution converges.
+
+### Trapezoidal method
+The Trapezoidal method is a numerical integration method that approximates the area under the graph of the function as a trapezoid, this method can be used in transient analysis to derive a linear companion model for capacitors and inductors  to solve the system of differential equations iterativly at every time step
+
+### Sparse matrices
+Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to make some operation on it.
