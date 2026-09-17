@@ -105,3 +105,9 @@ Some compromises were made when reading sacle factors, they are not case sensiti
  - n -> E-9
  - p -> E-12
  - f -> E-15
+
+### Circuit data structure
+The circuit data structure is a class containing all the information and helper methods that the solver might need to solve the circuit, the circuit data structure stores the elements of the circuit and their positions in the circuit and their values, it also stores the number of nodes of the circuit and information about the mode of analysis. The circuit class also provides helper methods such as methods that build and update the modified nodal analysis matrix using element stamps, the element stamps may change according to the type of analysis like capacitors and inductors or diodes
+
+### Solver
+The solver class is used to solve the matrix by determining the mode of analysis and then solving the circuit by calling the circuit's data structure helper method that builds the modified nodal analysis matrix then solves it using Sparse LU factorization.
