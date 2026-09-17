@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	cout << "FAKE_SIM: SparseSolver:\n\n";
+	cout << "MNA Solver: SparseSolver:\n\n";
 
 	Circuit circuit;
 	Solver solver;
