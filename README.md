@@ -90,4 +90,10 @@ The simulator performs 3 main functions:
   <li>Build the circuit data structure</li>
   <li>Solve the circuit</li>
 </ol>
+
 In the following sections we will discuss the these three in detail.
+
+### Parser
+The netlist parser is a function that works by reading space separated variables and storing it to build the circuit data structure.
+Some compromises were made when reading sacle factors, they are not case sensitive and can only be single characters not like standard spice syntax the scaling factors are provided below to avoid confusion and errors in the program:
+ - asdasd
