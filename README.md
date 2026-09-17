@@ -125,3 +125,6 @@ The Trapezoidal method is a numerical integration method that approximates the a
 
 ### Sparse matrices
 Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to perform operations on it.
+
+## Limitations
+
