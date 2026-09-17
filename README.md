@@ -50,7 +50,7 @@ The next section walks through a few example netlists.
 
 ## Simulation examples
 
-Example 1 — full bridge rectifier with filter capacitor:
+Example 1: full bridge rectifier with filter capacitor:
 
 ```
 Full bridge rectifier circuit with filter capacitor
@@ -71,7 +71,7 @@ The output is exported to a text file. Plotting it with a short Python script pr
 
 <img width="1920" height="974" alt="Figure_1" src="https://github.com/user-attachments/assets/b7209697-a76f-437e-bb94-97e2e4add681" />
 
-Example 2 — simple band-pass filter:
+Example 2: simple band-pass filter:
 ```
 Simple bandpass filter circuit
 V1 1 0 AC 1
@@ -88,7 +88,7 @@ Band-pass filter frequency response:
 
 <img width="1920" height="974" alt="Figure_2" src="https://github.com/user-attachments/assets/69a7c30f-1236-4ff8-98b7-674268ef7893" />
 
-Example 3 — simple BJT biasing circuit:
+Example 3: simple BJT biasing circuit:
 ```
 A simple BJT biasing circuit
 R1 1 2 10k
