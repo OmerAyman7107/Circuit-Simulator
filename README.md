@@ -4,6 +4,7 @@ This is a simple circuit simulation program that is able to perform DC, AC and t
 ## How to use the program
 The program prompts the user to enter a file address containg the netlist the user wants to simulate.
 The syntax of the netlist is the same as a standerd spice netlist but with slight modifications.
+The output is written to a file 
 ### Netlist syntax 
 The program has support for dependent and independent sources, resistors, capacitors, iductors, diodes and BJTs, the sytax for these elements are as follows:
 - ***Resistor:*** `Rname n+ n- value`
@@ -29,4 +30,13 @@ The simulator is capable of performing DC, AC and Transient analysis, their synt
 In the next section we will simulate some example netlists.
 
 ## Simulation examples
-
+`Full bridge rectifier circuit with filter capacitor
+V1 1 3 SIN(0 100 1k 1m 0 90)
+D1 1 2
+D2 0 1
+D3 3 2
+D4 0 3
+R1 0 2 100k
+C1 0 2 10u
+.tran 10u 10m
+`
