@@ -30,7 +30,7 @@ The simulator is capable of performing DC, AC and Transient analysis, their synt
 In the next section we will simulate some example netlists.
 
 ## Simulation examples
-`Full bridge rectifier circuit with filter capacitor
+``Full bridge rectifier circuit with filter capacitor
 V1 1 3 SIN(0 100 1k 1m 0 90)
 D1 1 2
 D2 0 1
@@ -39,4 +39,4 @@ D4 0 3
 R1 0 2 100k
 C1 0 2 10u
 .tran 10u 10m
-`
+``
