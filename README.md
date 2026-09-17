@@ -67,3 +67,15 @@ The output is exported to a text file and by plotting the result using a simple 
 
 <img width="1920" height="974" alt="Figure_2" src="https://github.com/user-attachments/assets/69a7c30f-1236-4ff8-98b7-674268ef7893" />
 
+Example 3:
+```
+A simple BJT biasing circuit
+R1 1 2 10k
+R2 5 0 1k
+R3 4 3 100k
+Q1 2 4 5 
+V1 1 0 12
+V2 3 0 5
+.op
+```
+<img width="674" height="413" alt="image" src="https://github.com/user-attachments/assets/76cf6165-0205-4089-b94a-1c260d016f95" />
