@@ -4,7 +4,7 @@ This is a simple circuit simulation program that is able to perform DC, AC and t
 ## How to use the program
 The program prompts the user to enter a file address containg the netlist the user wants to simulate.
 The syntax of the netlist is the same as a standerd spice netlist but with slight modifications.
-The output is written to a file 
+The output is written to a text file and can easily be plotted using a simple script as will be seen in the examples section. 
 ### Netlist syntax 
 The program has support for dependent and independent sources, resistors, capacitors, iductors, diodes and BJTs, the sytax for these elements are as follows:
 - ***Resistor:*** `Rname n+ n- value`
@@ -52,5 +52,14 @@ The output is exported to a text file and by plotting the result using a simple 
 
 Example 2:
 ```
-
+Simple band pass filter circuit
+V1 1 0 AC 1
+L1 1 2 10u
+C1 3 2 25p
+R1 3 0 50
+.ac dec 100 1 10G
 ```
+<p align="center">
+<img width="550" height="310" alt="image" src="https://github.com/user-attachments/assets/31ed8ef9-87ac-488a-803d-efb5d013e9d8" />
+</p>
+
