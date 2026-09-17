@@ -44,4 +44,7 @@ In the next section we will simulate some example netlists.
 <p align="center">
 <img width="551" height="316" alt="image" src="https://github.com/user-attachments/assets/448ae850-042d-4524-bef4-105456b91067" />
 </p>
+The output is exported to a text file and by plotting the result using a simple python script we get this waveform.
+
+<img width="1920" height="974" alt="Figure_1" src="https://github.com/user-attachments/assets/b7209697-a76f-437e-bb94-97e2e4add681" />
 
