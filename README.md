@@ -63,3 +63,7 @@ R1 3 0 50
 <img width="550" height="310" alt="image" src="https://github.com/user-attachments/assets/31ed8ef9-87ac-488a-803d-efb5d013e9d8" />
 </p>
 
+The output is exported to a text file and by plotting the result using a simple python script we get this waveform.
+
+<img width="1920" height="974" alt="Figure_2" src="https://github.com/user-attachments/assets/69a7c30f-1236-4ff8-98b7-674268ef7893" />
+
