@@ -78,4 +78,6 @@ V1 1 0 12
 V2 3 0 5
 .op
 ```
+<p align="center">
 <img width="674" height="413" alt="image" src="https://github.com/user-attachments/assets/76cf6165-0205-4089-b94a-1c260d016f95" />
+</p>
