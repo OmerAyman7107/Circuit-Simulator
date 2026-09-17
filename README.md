@@ -41,3 +41,5 @@ In the next section we will simulate some example netlists.
   C1 0 2 10u
   .tran 10u 10m
 ```
+<img width="942" height="514" alt="VsDebugConsole_bZCqQY6MhM" src="https://github.com/user-attachments/assets/b3c52762-dd33-4e01-a636-fadb7216f5e8" />
+
