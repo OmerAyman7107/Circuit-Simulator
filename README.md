@@ -3,7 +3,7 @@ This is a simple circuit simulation program that is able to perform DC, AC and t
 
 ## How to use the program
 The program prompts the user to enter a file address containg the netlist the user wants to simulate.
-The syntax of the netlist is the same as a standerd spice netlist but with slight modifications.
+The syntax of the netlist is the same as a standerd spice netlist but it doesn't provide the same flexibility adn cusomizability of a standard spice netlist parser.
 The output is written to a text file and can easily be plotted using a simple script as will be seen in the examples section. 
 ### Netlist syntax 
 The program has support for dependent and independent sources, resistors, capacitors, iductors, diodes and BJTs, the sytax for these elements are as follows:
