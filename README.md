@@ -81,3 +81,13 @@ V2 3 0 5
 <p align="center">
 <img width="674" height="413" alt="image" src="https://github.com/user-attachments/assets/76cf6165-0205-4089-b94a-1c260d016f95" />
 </p>
+
+
+## How the simulator works
+The simulator performs 3 main functions:
+<ol>
+  <li>Parse the netlist</li>
+  <li>Build the circuit data structure</li>
+  <li>Solve the circuit</li>
+</ol>
+In the following sections we will discuss the these three in detail.
