@@ -95,5 +95,13 @@ In the following sections we will discuss the these three in detail.
 
 ### Parser
 The netlist parser is a function that works by reading space separated variables and storing it to build the circuit data structure.
-Some compromises were made when reading sacle factors, they are not case sensitive and can only be single characters not like standard spice syntax the scaling factors are provided below to avoid confusion and errors in the program:
- - asdasd
+Some compromises were made when reading sacle factors, they are not case sensitive and can only be single characters not like standard spice syntax the scaling factors are provided below to avoid confusion and errors when using the program:
+ - T -> E+12
+ - G -> E+9
+ - M -> E+6
+ - k -> E+3
+ - m -> E+-3
+ - u -> E-6
+ - n -> E-9
+ - p -> E-12
+ - f -> E-15
