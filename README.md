@@ -17,6 +17,7 @@ The program has support for dependent and independent sources, resistors, capaci
 - ***Current controlled current source***: Fname n+ n- Vcontrol value
 - ***Diode***: Dname n+ n- model
 - ***BJT***: Qname C B E model
+
 Some syntax isn't utilized as it should be like device models, because device parameters are already set to a default value and their ism't an option to choose a different device model other than changing the default values in the program.
 
 
