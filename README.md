@@ -1,25 +1,27 @@
 # Circuit-Simulator
-This is a simple circuit simulation program that is able to perform DC, AC and transient analysis of linear and non linear circuits.
+This is a simple circuit simulation program that is able to perform DC, AC, and transient analysis of linear and non linear circuits.
 
 ## How to use the program
-The program prompts the user to enter a file address containg the netlist the user wants to simulate.
-The syntax of the netlist is the same as a standerd spice netlist but it doesn't provide the same flexibility adn cusomizability of a standard spice netlist parser.
+The program prompts the user to enter a file address containing the netlist the user wants to simulate.
+The syntax of the netlist is the same as a standard spice netlist but it doesn't provide the same flexibility and customizability of a standard spice netlist parser.
 The output is written to a text file and can easily be plotted using a simple script as will be seen in the examples section. 
 ### Netlist syntax 
-The program has support for dependent and independent sources, resistors, capacitors, iductors, diodes and BJTs, the sytax for these elements are as follows:
+The program has support for dependent and independent sources, resistors, capacitors, inductors, diodes, and BJTs, the syntax for these elements are as follows:
 - ***Resistor:*** `Rname n+ n- value`
 - ***Capacitor:*** `Cname n+ n- value`
 - ***Inductor:*** `Lname n+ n- value`
 - ***Voltage:*** `Vname n+ n- <[DC] value> <AC magnitude [phase]>`
 - ***Transient Voltage:*** `Vname n+ n- SIN(VO VA fo TD a phase)`
-- ***Voltage controlled voltage source"*** `Ename n+ n- nc1 nc2 value`
-- ***Voltage controlled current source:*** `Gname n+ n- nc1 nv2 value`
+
+  `VO` = offset, `VA` = amplitude, `fo` = frequency, `TD` = delay, `a` = damping, `phase` = phase in degrees.
+- ***Voltage controlled voltage source*** `Ename n+ n- nc1 nc2 value`
+- ***Voltage controlled current source:*** `Gname n+ n- nc1 nc2 value`
 - ***Current controlled voltage source:*** `Hname n+ n- Vcontrol value`
 - ***Current controlled current source:*** `Fname n+ n- Vcontrol value`
 - ***Diode:*** `Dname n+ n- model`
 - ***BJT:*** `Qname C B E model`
 
-Some syntax isn't utilized as it should be like device models, because device parameters are already set to a default value and their isn't an option to choose a different device model other than changing the default values in the program.
+Some syntax isn't utilized as it should be like device models, because device parameters are already set to a default value and there isn't an option to choose a different device model other than changing the default values in the program, in fact you can even not write the dveice model and it will work just fine as it has no actual use in the program.
 
 ### Analysis commands
 The simulator is capable of performing DC, AC and Transient analysis, their syntax is listed below:
@@ -52,7 +54,7 @@ The output is exported to a text file and by plotting the result using a simple 
 
 Example 2:
 ```
-Simple band pass filter circuit
+Simple bandpass filter circuit
 V1 1 0 AC 1
 L1 1 2 10u
 C1 3 2 25p
@@ -94,32 +96,32 @@ The simulator performs 3 main functions:
 In the following sections we will discuss the these three in detail.
 
 ### Parser
-The netlist parser is a function that works by reading space separated variables and storing it to build the circuit data structure.
-Some compromises were made when reading sacle factors, they are not case sensitive and can only be single characters not like standard spice syntax the scaling factors are provided below to avoid confusion and errors when using the program:
+The netlist parser is a function that works by reading space separated tokens and storing them to build the circuit data structure.
+Some compromises were made when reading scale factors, they are case sensitive and can only be single characters. Unlike standard spice syntax, the scaling factors are provided below to avoid confusion and errors when using the program:
  - T -> E+12
  - G -> E+9
  - M -> E+6
- - k -> E+3
- - m -> E+-3
+ - K or k -> E+3
+ - m -> E-3
  - u -> E-6
  - n -> E-9
  - p -> E-12
  - f -> E-15
 
 ### Circuit data structure
-The circuit data structure is a class containing all the information and helper methods that the solver might need to solve the circuit, the circuit data structure stores the elements of the circuit and their positions in the circuit and their values, it also stores the number of nodes of the circuit and information about the mode of analysis. The circuit class also provides helper methods such as methods that build and update the modified nodal analysis matrix using element stamps, the element stamps may change according to the type of analysis like capacitors and inductors or diodes
+The circuit data structure is a class containing all the information and helper methods that the solver might need to solve the circuit, it stores the elements of the circuit and their positions in the circuit and their values, it also stores the number of nodes of the circuit and information about the mode of analysis. The circuit class also provides helper that build and update the modified nodal analysis matrix using element stamps, the element stamps may change according to the type of analysis like capacitors and inductors or diodes.
 
 ### Solver
-The solver class is used to solve the matrix by determining the mode of analysis and then solving the circuit by calling the circuit's data structure helper method that builds the modified nodal analysis matrix then solves it using Sparse LU factorization.
+The solver class is used to solve the matrix by determining the mode of analysis and then solving the circuit. To do this, it calls the circuit's helper method that builds the modified nodal analysis matrix then solves it using sparse LU factorization.
 
 ## Numerical methods
 This section discusses the numerical methods that were used in the program.
 
 ### Newton-Raphson method
-The Newton-Raphson method is an iterative method used to solve non-linear equations by linearizing around an initial guess then solving iterativly until the solution converges, it is used to linearize non-linear circuit elements and finding a linearized companion model to be replaced with the element then solve the system until the solution converges.
+The Newton-Raphson method is an iterative method used to solve nonlinear equations by linearizing around an initial guess then solving iterativly until the solution converges, it is used for linearizing nonlinear circuit elements and finding a linearized companion model to be replaced with the element then solve the system until the solution converges.
 
 ### Trapezoidal method
-The Trapezoidal method is a numerical integration method that approximates the area under the graph of the function as a trapezoid, this method can be used in transient analysis to derive a linear companion model for capacitors and inductors  to solve the system of differential equations iterativly at every time step
+The Trapezoidal method is a numerical integration method that approximates the area under the graph of the function as a trapezoid, this method can be used in transient analysis to derive a linear companion model for capacitors and inductors  to solve the system of differential equations iteratively at every time step.
 
 ### Sparse matrices
-Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to make some operation on it.
+Sparse matrices are matrices that are mostly populated with zeros, this property can be used to reduce the memory taken by large matrices and reduce the time taken to perform operations on it.
