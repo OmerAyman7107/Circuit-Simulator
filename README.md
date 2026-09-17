@@ -152,3 +152,6 @@ This simulator was written as a learning project, and its scope and capabilities
 - The simulator writes results to a single text file chosen by the user, one variable at a time. There is no batch export or multi‑variable output.
 - There is no built‑in plotting. Waveforms are exported as plain text and must be plotted separately (for example, with Python and Matplotlib, as shown in the examples).
 
+As you can see there are many limitations to the simulator, and I was lazy enough that I had to let an Ai list them all for me instead of doing it myself.
+
+At the end I would like to thank my friend who helped me throughout this project for the fruitful discussions and brainstorming sessions we had, and I would also like to thank rofessor Hesham Omran who's lectures were really extremly useful in understanding spice simultors. None of this could have been possible without them (after god's blessing firstly).
