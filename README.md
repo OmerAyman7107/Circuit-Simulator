@@ -138,7 +138,7 @@ The circuit data structure is a class that holds everything the solver
 needs: the elements of the circuit, their positions and values, the number
 of nodes, and the mode of analysis. It also provides helper methods that
 build and update the Modified Nodal Analysis (MNA) matrix using element
-stamps. The stamps themselves change with the analysis type — capacitors
+stamps. The stamps themselves change with the analysis type; capacitors
 and inductors contribute different stamps in transient versus AC, and
 diodes contribute nonlinear stamps that are updated on every
 Newton-Raphson iteration.
@@ -155,8 +155,8 @@ factorization.
 
 The Newton-Raphson method solves nonlinear equations iteratively by
 linearizing around an initial guess and refining the solution until it
-converges. Here it is used to linearize nonlinear elements — diodes and
-the internal junctions of BJTs — into a linear companion model that is
+converges. Here it is used to linearize nonlinear elements - diodes and
+the internal junctions of BJTs - into a linear companion model that is
 solved as part of the linear system. The process repeats until the
 solution stops changing between iterations.
 
@@ -171,7 +171,7 @@ into a system of linear equations that can be solved step by step.
 
 Sparse matrices are matrices in which most entries are zero. Storing only
 the nonzero entries reduces both the memory footprint and the time
-required for operations such as factorization — an advantage that grows
+required for operations such as factorization, an advantage that grows
 with the size of the circuit.
 
 ## Known limitations
@@ -221,7 +221,7 @@ following limitations are worth knowing before you use it.
 - Results are written to a single text file, one variable at a time. There
   is no batch export or multi-variable output.
 - There is no built-in plotting. Waveforms are exported as plain text and
-  must be plotted separately — for example, with Python and Matplotlib, as
+  must be plotted separately, for example, with Python and Matplotlib, as
   shown in the examples.
 
 ## Acknowledgements
