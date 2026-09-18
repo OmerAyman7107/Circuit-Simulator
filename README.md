@@ -78,7 +78,7 @@ V1 1 0 AC 1
 L1 1 2 10u
 C1 3 2 25p
 R1 3 0 50
-.ac dec 100 1 10G
+.ac dec 100 1k 50G
 ```
 <p align="center">
 <img width="550" height="310" alt="image" src="https://github.com/user-attachments/assets/31ed8ef9-87ac-488a-803d-efb5d013e9d8" />
