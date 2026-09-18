@@ -71,6 +71,8 @@ The output is exported to a text file. Plotting it with a short Python script pr
 
 <img width="1920" height="974" alt="Figure_1" src="https://github.com/user-attachments/assets/b7209697-a76f-437e-bb94-97e2e4add681" />
 
+
+
 Example 2: simple band-pass filter:
 ```
 Simple bandpass filter circuit
@@ -87,6 +89,8 @@ R1 3 0 50
 Band-pass filter frequency response:
 
 <img width="1920" height="974" alt="Figure_2" src="https://github.com/user-attachments/assets/69a7c30f-1236-4ff8-98b7-674268ef7893" />
+
+
 
 Example 3: simple BJT biasing circuit:
 ```
@@ -232,3 +236,10 @@ would also like to thank Professor Hesham Omran, whose lectures on SPICE
 simulators were invaluable in helping me understand how these tools work
 under the hood. First and foremost, thanks be to God; this would not have
 been possible without His blessing.
+
+The limitations section and the source-code comments were drafted with
+the help of an AI assistant and reviewed before publication.
+
+
+
+
