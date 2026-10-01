@@ -230,7 +230,7 @@ following limitations are worth knowing before you use it.
 
 ## Acknowledgements
 
-I would like to thank my friend, whose fruitful discussions and
+I would like to thank my friend Ahmed Sherif, whose fruitful discussions and
 brainstorming sessions helped shape this project from the beginning. I
 would also like to thank Professor Hesham Omran, whose lectures on SPICE
 simulators were invaluable in helping me understand how these tools work
